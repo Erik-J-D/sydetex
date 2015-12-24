@@ -1,0 +1,38 @@
+\ProvidesPackage{sydewtrtitle}[20/12/2015 v.01 Title page following the uwaterloo SYDE style guide]
+
+\newcommand*{\employer}[1]{\gdef\@employer{#1}}
+\newcommand*{\@employer}{\texttt{\string\employer} Employer currently not set. Please fix this.}
+
+\newcommand*{\employeraddress}[1]{\gdef\@employeraddress{#1}}
+\newcommand*{\@employeraddress}{\texttt{\string\employeraddress} Address currently not set. Please fix this.}
+
+\newcommand*{\studentnumber}[1]{\gdef\@studentnumber{#1}}
+\newcommand*{\@studentnumber}{\texttt{\string\studentnumber} Student number currently not set. Please fix this.}
+
+\newcommand*{\lastsemester}[1]{\gdef\@lastsemester{#1 Department of Systems Design Engineering}}
+\newcommand*{\@lastsemester}{\texttt{\string\lastsemester} Last semester currently not set. Please fix this.}
+\linespread{1.5}
+\renewcommand*{\maketitle}{
+\begin{titlepage}
+	\centering
+	
+	{\large University of Waterloo \\ Faculty of Engineering}
+	
+	\vfill
+	
+	{\huge\@title\unskip\strut\par}
+
+	\vfill
+
+	{\large \@employer\par}
+	{\large \@employeraddress\par}
+	\vspace {2cm}
+
+	{\large\@author\unskip\strut\par}
+	{\large ID \@studentnumber\par}
+	{\large\@lastsemester\par}
+	{\large \@date\par}
+
+\end{titlepage}
+}
+\endinput

@@ -1,17 +1,36 @@
 \documentclass[twoside, 12pt]{report}
 \usepackage[utf8]{inputenc}
 
+% Set page size and margins
 \usepackage[top=1in, bottom=1in, inner=1.5in, outer=1in]{geometry}
 \geometry{letterpaper} 
 
 \usepackage{graphicx}
-\usepackage{sydereporttitle}
 
-\title{How to Latex 101}
-\classname{SYDE 123}
-\author{Erik Derohanian, 12345678, 3B \\ person 2, etc}
-\date{January 12, 1384}
-\supervisortext{Course Instructor: Chris Hadfield}
+% Use the following for a regular report
+% \usepackage{sydereporttitle}
+
+% Use the following for a work term report
+\usepackage{sydewtrtitle}
+
+% Fill in the following blob for a regular report
+% \title{How to Latex 101}
+% \classname{SYDE 123}
+% \author{Erik Derohanian, 12345678, 3B \\ person 2, etc}
+% \date{January 12, 1384}
+% \supervisortext{Course Instructor: Chris Hadfield}
+
+% Fill in this blob for a work term report
+\title{Design of 9600 Baud Modem}
+\author{Erik Derohanian}
+\studentnumber{12345678}
+\lastsemester{3A}
+\date{January 12, 1978}
+\employer{Gandalf Technologies}
+\employeraddress{130 Colonnade Road \\ Nepean, ON K2E 1B6}
+
+% make our line spacing 1.5
+\linespread{1.5}
 
 \begin{document}
 \maketitle
