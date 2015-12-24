@@ -1,0 +1,31 @@
+\ProvidesPackage{sydereporttitle}[20/12/2015 v.01 Title page following the uwaterloo SYDE style guide]
+
+\newcommand*{\supervisortext}[1]{\gdef\@supervisortext{#1}}
+\newcommand*{\@supervisortext}{\texttt{\string\supervisortext} Currently not set. Please fix this.}
+
+\newcommand*{\classname}[1]{\gdef\@classname{A Report Submitted in Partial Fulfillment of the Requirements for #1}}
+\newcommand*{\@classname}{\texttt{\string\classname} Currently not set. Please fix this.}
+
+\renewcommand*{\maketitle}{
+\begin{titlepage}
+	\centering
+	{\huge\@title\unskip\strut\par}
+
+	\vfill
+
+	{\large \@classname\par}
+	\vspace{2cm}
+
+	{\large\@author\unskip\strut\par}
+	\vspace{1cm}
+
+	{\large Faculty of Engineering\par}
+	{\large Department of Systems Design Engineering}
+	\vspace{1cm}
+
+	{\large \@date\par}
+	{\large\par\@supervisortext\unskip\strut\par}
+
+\end{titlepage}
+}
+\endinput
