@@ -1,18 +1,11 @@
 \documentclass[twoside, 12pt]{article}
 \usepackage[utf8]{inputenc}
 
-% Set page size and margins
-\usepackage[top=1in, bottom=1in, inner=1.5in, outer=1in]{geometry}
-\geometry{letterpaper} 
+%THIS IS WHERE ALL THE SYDE STUFF IS
+\usepackage{sydestyle}
 
+% Other imports go here
 \usepackage{graphicx}
-\usepackage{titlesec}
-\titleformat{\section}[display]{\Huge\bfseries}{\thesection}{0pt}{}
-% Use the following for a regular report
-% \usepackage{sydereporttitle}
-
-% Use the following for a work term report
-\usepackage{sydewtrtitle}
 
 % Fill in the following blob for a regular report
 % \title{How to Latex 101}
@@ -30,18 +23,16 @@
 \employer{Gandalf Technologies}
 \employeraddress{130 Colonnade Road \\ Nepean, ON K2E 1B6}
 
-% make our line spacing 1.5
-\linespread{1.5}
 
 \begin{document}
-\maketitle
+	\makewtrtitle
 
-\section{First section}
+	\section{First section}
 
-Your text goes here.
+	Your text goes here.
 
-\subsection{A subsection}
+	\subsection{A subsection}
 
-More text.
+	More text.
 
 \end{document}

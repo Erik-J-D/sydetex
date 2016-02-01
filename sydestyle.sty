@@ -1,0 +1,84 @@
+\ProvidesPackage{sydestyle}[20/12/2015 v.01 uWaterloo SYDE style guide]
+
+% Set page size and margins
+\usepackage[top=1in, bottom=1in, inner=1.5in, outer=1in]{geometry}
+\geometry{letterpaper} 
+
+% make our line spacing 1.5
+\linespread{1.5}
+
+% Title Page Stuff
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{titlesec}
+\titleformat{\section}[display]{\LARGE\bfseries}{\thesection}{0pt}{}
+
+\newcommand*{\employer}[1]{\gdef\@employer{#1}}
+\newcommand*{\@employer}{\texttt{\string\employer} Employer currently not set. Please fix this.}
+
+\newcommand*{\employeraddress}[1]{\gdef\@employeraddress{#1}}
+\newcommand*{\@employeraddress}{\texttt{\string\employeraddress} Address currently not set. Please fix this.}
+
+\newcommand*{\studentnumber}[1]{\gdef\@studentnumber{#1}}
+\newcommand*{\@studentnumber}{\texttt{\string\studentnumber} Student number currently not set. Please fix this.}
+
+\newcommand*{\lastsemester}[1]{\gdef\@lastsemester{#1 Department of Systems Design Engineering}}
+\newcommand*{\@lastsemester}{\texttt{\string\lastsemester} Last semester currently not set. Please fix this.}
+
+\newcommand*{\supervisortext}[1]{\gdef\@supervisortext{#1}}
+\newcommand*{\@supervisortext}{\texttt{\string\supervisortext} Currently not set. Please fix this.}
+
+\newcommand*{\classname}[1]{\gdef\@classname{A Report Submitted in Partial Fulfillment of the Requirements for #1}}
+\newcommand*{\@classname}{\texttt{\string\classname} Currently not set. Please fix this.}
+
+\newcommand*{\makereporttitle}{
+\begin{titlepage}
+	\centering
+	{\huge\@title\unskip\strut\par}
+
+	\vfill
+
+	{\large \@classname\par}
+	\vspace{2cm}
+
+	{\large\@author\unskip\strut\par}
+	\vspace{1cm}
+
+	{\large Faculty of Engineering\par}
+	{\large Department of Systems Design Engineering}
+	\vspace{1cm}
+
+	{\large \@date\par}
+	{\large\par\@supervisortext\unskip\strut\par}
+
+\end{titlepage}
+}
+
+\newcommand*{\makewtrtitle}{
+\begin{titlepage}
+	\centering
+
+	{\large University of Waterloo \\ Faculty of Engineering}
+
+	\vfill
+
+	{\huge\@title\unskip\strut\par}
+
+	\vfill
+
+	{\large \@employer\par}
+	{\large \@employeraddress\par}
+	\vspace {2cm}
+
+	{\large\@author\unskip\strut\par}
+	{\large ID \@studentnumber\par}
+	{\large\@lastsemester\par}
+	{\large \@date\par}
+
+\end{titlepage}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% End Title Page Stuff
+
+\endinput
