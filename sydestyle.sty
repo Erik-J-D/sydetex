@@ -1,8 +1,22 @@
 \ProvidesPackage{sydestyle}[20/12/2015 v.01 uWaterloo SYDE style guide]
 
+% start roman page numbers
+\setcounter{page}{1}
+\pagenumbering{roman}
+
+\newcommand*{\startarabicpagenumbers}{
+	\setcounter{page}{1}
+	\pagenumbering{arabic}
+}
+
 % Set page size and margins
 \usepackage[top=1in, bottom=1in, inner=1.5in, outer=1in]{geometry}
-\geometry{letterpaper} 
+\geometry{letterpaper}
+
+% Section heading formatting
+\usepackage{titlesec}
+\titleformat{\section}[display]{\LARGE\bfseries}{\thesection}{0pt}{}
+\titleformat{\subsubsection}{\normalsize\bfseries}{}{0pt}{}
 
 % make our line spacing 1.5
 \linespread{1.5}
@@ -10,8 +24,7 @@
 % Title Page Stuff
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\usepackage{titlesec}
-\titleformat{\section}[display]{\LARGE\bfseries}{\thesection}{0pt}{}
+
 
 \newcommand*{\employer}[1]{\gdef\@employer{#1}}
 \newcommand*{\@employer}{\texttt{\string\employer} Employer currently not set. Please fix this.}

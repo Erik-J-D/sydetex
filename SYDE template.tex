@@ -8,13 +8,17 @@
 \usepackage{graphicx}
 
 % Fill in the following blob for a regular report
+
 % \title{How to Latex 101}
 % \classname{SYDE 123}
 % \author{Erik Derohanian, 12345678, 3B \\ person 2, etc}
 % \date{January 12, 1384}
 % \supervisortext{Course Instructor: Chris Hadfield}
 
+
+
 % Fill in this blob for a work term report
+
 \title{Design of a Latex Report Following the SYDE Guide}
 \author{Erik Derohanian}
 \studentnumber{12345678}
@@ -24,15 +28,40 @@
 \employeraddress{130 Colonnade Road \\ Nepean, ON K2E 1B6}
 
 
+
+% Content here
 \begin{document}
+	
+	% Start with a title page! Alternatively, use
+	% \makereporttitle
+	% If you are writing a regular report
 	\makewtrtitle
+
+	% Make a table of contents.
+	\tableofcontents
+	\newpage
+
+	% List of figures and tables
+	\listoffigures
+	\newpage
+	\listoftables
+	\newpage
+
+	% Couldn't figure out how to automate this, but leave this line in to restart page numbers at 1 and with arabic numbers.
+	\startarabicpagenumbers
 
 	\section{First section}
 
-	Your text goes here.
+	Your text goes here. I'm going to add a bunch of words to make this a paragraph longer than one line.
+
+	The next paragraph is automatically indented, as per the guide (default \LaTeX\ behaviour)
 
 	\subsection{A subsection}
 
 	More text.
+
+	\subsubsection{A sub-subsection}
+
+	Yep, it's actually a \textbackslash subsubsection\{sub-subsection name\}.
 
 \end{document}
