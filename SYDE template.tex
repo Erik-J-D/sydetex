@@ -1,4 +1,4 @@
-\documentclass[twoside, 12pt]{report}
+\documentclass[twoside, 12pt]{article}
 \usepackage[utf8]{inputenc}
 
 % Set page size and margins
@@ -6,7 +6,8 @@
 \geometry{letterpaper} 
 
 \usepackage{graphicx}
-
+\usepackage{titlesec}
+\titleformat{\section}[display]{\Huge\bfseries}{\thesection}{0pt}{}
 % Use the following for a regular report
 % \usepackage{sydereporttitle}
 
@@ -21,7 +22,7 @@
 % \supervisortext{Course Instructor: Chris Hadfield}
 
 % Fill in this blob for a work term report
-\title{Design of 9600 Baud Modem}
+\title{Design of a Latex Report Following the SYDE Guide}
 \author{Erik Derohanian}
 \studentnumber{12345678}
 \lastsemester{3A}
