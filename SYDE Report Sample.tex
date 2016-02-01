@@ -10,46 +10,17 @@
 \usepackage{amsmath}
 
 
-% Fill in the following blob for a regular report
-
-% \title{How to Latex 101}
-% \classname{SYDE 123}
-% \author{Erik Derohanian, 12345678, 3B \\ person 2, etc}
-% \date{January 12, 1384}
-% \supervisortext{Course Instructor: Chris Hadfield}
-
-
-
-% Fill in this blob for a work term report
-
-\title{Design of a Latex Report Following the SYDE Guide}
-\author{Erik Derohanian}
-\studentnumber{12345678}
-\lastsemester{3A}
-\date{January 12, 1978}
-\employer{Gandalf Technologies}
-\employeraddress{130 Colonnade Road \\ Nepean, ON K2E 1B6}
-
-
+\title{Latex Style for SYDE}
+\classname{SYDE 000}
+\author{Erik Derohanian, 12345678, 3B \\ person 2, etc}
+\date{January 12, 1984}
+\supervisortext{Course Instructor: Chris Hadfield}
 
 % Content here
 \begin{document}
 	
-	% Start with a title page! Alternatively, use
-	% \makereporttitle
-	% If you are writing a regular report
-	\makewtrtitle
-
-	% Your letter of submittal should go here:
-	Dear prof person,
-
-	Pretend this page is a letter of submittal.
-
-	Erik Derohanian
-	2041
-
-	% new page at the end of the letter.
-	\newpage
+	% Start with a title page!
+	\makereporttitle
 
 	% Abstract
 	\begin{abstract}
@@ -88,10 +59,10 @@
 	Here is a figure:
 
     \begin{figure}[!ht]
-        \label{pcontroller}
         \centering
         \includegraphics[width=0.7\textwidth]{pcontroller}
         \caption{System diagram of a P controller}
+        \label{pcontroller}
     \end{figure}
 
 	I can start talking about that figure, and refer to it as figure \ref{pcontroller} and the number will update based on the label which is very useful when you're shuffling stuff around because you don't have to keep track of figure numbers.
