@@ -1,4 +1,5 @@
 \ProvidesPackage{sydestyle}[20/12/2015 v.01 uWaterloo SYDE style guide]
+\usepackage{etoolbox}
 
 % start roman page numbers
 \setcounter{page}{1}
@@ -20,6 +21,9 @@
 
 % make our line spacing 1.5
 \linespread{1.5}
+
+% clear page after abstract
+\apptocmd{\endabstract}{\newpage}{}{}
 
 % Title Page Stuff
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
