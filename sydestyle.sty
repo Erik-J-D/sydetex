@@ -1,5 +1,9 @@
 \ProvidesPackage{sydestyle}[20/12/2015 v.01 uWaterloo SYDE style guide]
+
+% Style imports
 \usepackage{etoolbox}
+\usepackage{titlesec}
+\usepackage[top=1in, bottom=1in, inner=1.5in, outer=1in]{geometry}
 
 % start roman page numbers
 \setcounter{page}{1}
@@ -11,7 +15,6 @@
 }
 
 % Set page size and margins
-\usepackage[top=1in, bottom=1in, inner=1.5in, outer=1in]{geometry}
 \geometry{letterpaper}
 
 % Section heading formatting
@@ -24,6 +27,9 @@
 
 % clear page after abstract
 \apptocmd{\endabstract}{\newpage}{}{}
+
+% Make sections break page when done
+\newcommand{\sectionbreak}{\clearpage}
 
 % Title Page Stuff
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
