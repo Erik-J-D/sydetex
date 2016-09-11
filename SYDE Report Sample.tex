@@ -58,12 +58,12 @@
 
 	Here is a figure:
 
-    \begin{figure}[!ht]
-        \centering
-        \includegraphics[width=0.7\textwidth]{pcontroller}
-        \caption{System diagram of a P controller}
-        \label{pcontroller}
-    \end{figure}
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[width=0.7\textwidth]{pcontroller}
+		\caption{System diagram of a P controller}
+		\label{pcontroller}
+	\end{figure}
 
 	I can start talking about that figure, and refer to it as figure \ref{pcontroller} and the number will update based on the label which is very useful when you're shuffling stuff around because you don't have to keep track of figure numbers.
 
@@ -71,14 +71,14 @@
 
 	\begin{center}
 		\begin{table}[!ht]
-		    \begin{tabular}{ | l | l | l | p{5cm} |}
-		    \hline
-		    Day & Min Temp & Max Temp & Summary \\ \hline
-		    Monday & 11C & 22C & A clear day. \\ 	\hline
-		    Tuesday & 9C & 19C & Cloudy with rain.\\ \hline
-		    Wednesday & 10C & 21C & Rain. \\
-		    \hline
-		    \end{tabular}
+			\begin{tabular}{ | l | l | l | p{5cm} |}
+			\hline
+			Day & Min Temp & Max Temp & Summary \\ \hline
+			Monday & 11C & 22C & A clear day. \\ 	\hline
+			Tuesday & 9C & 19C & Cloudy with rain.\\ \hline
+			Wednesday & 10C & 21C & Rain. \\
+			\hline
+			\end{tabular}
 			\caption{Some table I copied from the Latex wikibook online}
 			\label{shittytable}
 		\end{table}
@@ -88,21 +88,21 @@
 
 	Here is a kitten:
 
-    \begin{figure}[!ht]
-        \label{kitten}
-        \centering
-        \includegraphics[width=0.5\textwidth]{kitten}
-        \caption{It's a kitten. You like kittens.}
-    \end{figure}
+	\begin{figure}[!ht]
+		\label{kitten}
+		\centering
+		\includegraphics[width=0.5\textwidth]{kitten}
+		\caption{It's a kitten. You like kittens.}
+	\end{figure}
 
 	\section{Equations}
 
 	Here is the transfer function to the control system shown in figure \ref{pcontroller}:
 
-    \begin{equation}
-        \label{ptransfer}
-        T(s)=\frac{Y(s)}{R(s)}=I(s) \cdot \frac{K_p \cdot P(s)}{1 + K_p \cdot P(s) \cdot H(s)}
-    \end{equation}
+	\begin{equation}
+		\label{ptransfer}
+		T(s)=\frac{Y(s)}{R(s)}=I(s) \cdot \frac{K_p \cdot P(s)}{1 + K_p \cdot P(s) \cdot H(s)}
+	\end{equation}
 
 	As usual, we can use it's number. That was formula \eqref{ptransfer}
 
