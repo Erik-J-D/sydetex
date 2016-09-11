@@ -1,6 +1,6 @@
 # sydetex
 
-A Latex style that aims to match the SYDE uWaterloo style guide. There is an example WTR and an example Report to see how it's used.
+A Latex style that aims to match the SYDE uWaterloo style guide. There is an example WTR and an example Report to see how it's used. Obviously, I take no responsibility for marks lost through use of this template. That said, I'm pretty sure it meets all requirements...
 
 ## To use
 
