@@ -4,6 +4,7 @@
 \usepackage{etoolbox}
 \usepackage{titlesec}
 \usepackage[top=1in, bottom=1in, inner=1.5in, outer=1in]{geometry}
+\usepackage[toc]{appendix}
 
 % start roman page numbers
 \setcounter{page}{1}
@@ -21,6 +22,13 @@
 \usepackage{titlesec}
 \titleformat{\section}[display]{\LARGE\bfseries}{\thesection}{0pt}{}
 \titleformat{\subsubsection}{\normalsize\bfseries}{}{0pt}{}
+
+\newcommand*{\startappendixtitles}{
+    \titleformat{\section}[display]{\Large\bfseries}{Appendix \thesection}{0pt}{}
+}
+\newcommand*{\finishappendixtitles}{
+	\titleformat{\section}[display]{\LARGE\bfseries}{\thesection}{0pt}{}
+}
 
 % make our line spacing 1.5
 \linespread{1.5}
