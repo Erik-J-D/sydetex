@@ -23,11 +23,14 @@
 
 % Content here
 \begin{document}
-
+	% Specify start indent because other wise it may not line up perfectly with the default
+	% indents when we use the indent shortcuts
+	\startindent
 	% Start with a title page!
 	\makewtrtitle
 
-	% Your letter of submittal should go here:
+	% Your letter of submittal should go here, and it's not indented
+	\stopindent
 	Dear prof person,
 
 	Pretend this page is a letter of submittal.
@@ -36,8 +39,9 @@
 
 	12345678
 
-	% new page at the end of the letter.
+	% new page at the end of the letter and resume indenting
 	\newpage
+	\startindent
 
 	% Abstract
 	\begin{abstract}
@@ -75,12 +79,12 @@
 
 	Here is a figure:
 
-    \begin{figure}[!ht]
-        \centering
-        \includegraphics[width=0.7\textwidth]{pcontroller}
-        \caption{System diagram of a P controller}
-        \label{pcontroller}
-    \end{figure}
+	\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=0.7\textwidth]{pcontroller}
+	\caption{System diagram of a P controller}
+	\label{pcontroller}
+	\end{figure}
 
 	I can start talking about that figure, and refer to it as figure \ref{pcontroller} and the number will update based on the label which is very useful when you're shuffling stuff around because you don't have to keep track of figure numbers.
 
@@ -88,14 +92,14 @@
 
 	\begin{center}
 		\begin{table}[!ht]
-		    \begin{tabular}{ | l | l | l | p{5cm} |}
-		    \hline
-		    Day & Min Temp & Max Temp & Summary \\ \hline
-		    Monday & 11C & 22C & A clear day. \\ 	\hline
-		    Tuesday & 9C & 19C & Cloudy with rain.\\ \hline
-		    Wednesday & 10C & 21C & Rain. \\
-		    \hline
-		    \end{tabular}
+			\begin{tabular}{ | l | l | l | p{5cm} |}
+			\hline
+			Day & Min Temp & Max Temp & Summary \\ \hline
+			Monday & 11C & 22C & A clear day. \\ 	\hline
+			Tuesday & 9C & 19C & Cloudy with rain.\\ \hline
+			Wednesday & 10C & 21C & Rain. \\
+			\hline
+			\end{tabular}
 			\caption{Some table I copied from the Latex wikibook online}
 			\label{shittytable}
 		\end{table}
@@ -105,21 +109,21 @@
 
 	Here is a kitten:
 
-    \begin{figure}[!ht]
-        \label{kitten}
-        \centering
-        \includegraphics[width=0.5\textwidth]{kitten}
-        \caption{It's a kitten. You like kittens.}
-    \end{figure}
+	\begin{figure}[!ht]
+	\label{kitten}
+	\centering
+	\includegraphics[width=0.5\textwidth]{kitten}
+	\caption{It's a kitten. You like kittens.}
+	\end{figure}
 
 	\section{Equations}
 
 	Here is the transfer function to the control system shown in figure \ref{pcontroller}:
 
-    \begin{equation}
-        \label{ptransfer}
-        T(s)=\frac{Y(s)}{R(s)}=I(s) \cdot \frac{K_p \cdot P(s)}{1 + K_p \cdot P(s) \cdot H(s)}
-    \end{equation}
+	\begin{equation}
+	\label{ptransfer}
+	T(s)=\frac{Y(s)}{R(s)}=I(s) \cdot \frac{K_p \cdot P(s)}{1 + K_p \cdot P(s) \cdot H(s)}
+	\end{equation}
 
 	As usual, we can use it's number. That was formula \eqref{ptransfer}
 
@@ -127,16 +131,20 @@
 
 	Three items are cited: \textit{The \LaTeX\ Companion} book \cite{latexcompanion}, the Einstein journal paper \cite{einstein}, and the Donald Knuth's website \cite{knuthwebsite}. The \LaTeX\ related items are \cite{latexcompanion,knuthwebsite}.
 
-    \newpage
-    \startappendixtitles
-    \begin{appendices}
+	\newpage
+	\startappendixtitles
+	\begin{appendices}
 
-    \section{Glossary}
+	\section{Glossary}
+	% In the specific case of a glossary, you probably don't want to indent every new definition
+	\stopindent
+	word: some def
 
-        word: some def
+	word2: some other def
 
-    \end{appendices}
-    \finishappendixtitles
+	\startindent
+	\end{appendices}
+	\finishappendixtitles
 
 
 	\bibliographystyle{unsrt}%Used BibTeX style is unsrt

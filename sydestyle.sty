@@ -23,12 +23,22 @@
 \titleformat{\section}[display]{\LARGE\bfseries}{\thesection}{0pt}{}
 \titleformat{\subsubsection}{\normalsize\bfseries}{}{0pt}{}
 
+% The appendices need slightly different headers
 \newcommand*{\startappendixtitles}{
     \titleformat{\section}[display]{\Large\bfseries}{Appendix \thesection}{0pt}{}
 }
 \newcommand*{\finishappendixtitles}{
 	\titleformat{\section}[display]{\LARGE\bfseries}{\thesection}{0pt}{}
 }
+
+% Shortcut to start and stop indenting whenever
+\newcommand*{\stopindent}{
+	\setlength{\parindent}{0pt}
+}
+\newcommand*{\startindent}{
+	\setlength{\parindent}{18pt}
+}
+
 
 % make our line spacing 1.5
 \linespread{1.5}
