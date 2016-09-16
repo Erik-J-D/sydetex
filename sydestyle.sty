@@ -124,9 +124,16 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % End Title Page Stuff
 
-\newcommand*{\makesydebib}{
-    \bibliographystyle{unsrt}%Used BibTeX style is unsrt
-    \bibliography{references}
+% param: file name of .bib file
+\newcommand\makesydebib[1]{
+\ifx&#1& % Check if argument #1 was not set
+    Please specify .bib file
+\else % argument #1 was provided
+    \begingroup
+        \raggedright
+        \bibliographystyle{unsrt}%Used BibTeX style is unsrt
+        \bibliography{#1}
+    \endgroup
+\fi
 }
-
 \endinput
