@@ -69,12 +69,15 @@
 	\end{abstract}
 
 	% Make a table of contents.
+	\addcontentsline{toc}{section}{Table of Contents}
 	\tableofcontents
 	\newpage
 
 	% List of figures and tables.
+	\addcontentsline{toc}{section}{List of Figures}
 	\listoffigures
 	\newpage
+	\addcontentsline{toc}{section}{List of Tables}
 	\listoftables
 	\newpage
 
@@ -112,6 +115,7 @@
 
 	\begin{center}
 		\begin{table}[!ht]
+			\caption{Some table I copied from the Latex wikibook online}
 			\begin{tabular}{ | l | l | l | p{5cm} |}
 			\hline
 			Day & Min Temp & Max Temp & Summary \\ \hline
@@ -120,7 +124,6 @@
 			Wednesday & 10C & 21C & Rain. \\
 			\hline
 			\end{tabular}
-			\caption{Some table I copied from the Latex wikibook online}
 			\label{shittytable}
 		\end{table}
 	\end{center}
