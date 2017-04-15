@@ -1,22 +1,32 @@
 \documentclass[12pt]{article}
 \usepackage[utf8]{inputenc}
 
-%THIS IS WHERE ALL THE SYDE STUFF IS
+%THIS IS WHERE ALL THE SYDE MAGIK COMES FROM
 \usepackage{sydestyle}
+
+% support for colors
+\usepackage{color, soul}
+
 
 % Other imports go here
 \usepackage{graphicx}
 \graphicspath{{figures/}}
-\usepackage{notoccite}
+\urlstyle{rm}
+
+\def\reportTitle{Design of a Latex WTR Following the SYDE Guide}
+\def\reportDueDate{January 12, 1867}
+\def\studentName{Erik Derohanian}
+\def\studentNumber{12345678}
+\def\company{Gandalf Technologies}
 
 % Fill in this blob
 
-\title{Design of a Latex WTR Following the SYDE Guide}
-\author{Erik Derohanian}
+\title{\reportTitle}
+\author{\studentName}
 \studentnumber{12345678}
 \lastsemester{3A}
-\date{January 12, 1978}
-\employer{Gandalf Technologies}
+\date{\reportDueDate}
+\employer{\company}
 \employeraddress{130 Colonnade Road \\ Nepean, ON K2E 1B6}
 
 
@@ -31,41 +41,47 @@
 
 	% Your letter of submittal should go here, and it's not indented
 	\stopindent
-        \begin{spacing}{1.0}
+    \begin{singlespace}
 
-	YOUR RETURN ADDRESS HERE \\
+		YOUR RETURN ADDRESS HERE \\
 
-    	September 32, 1984 \\
+    	\reportDueDate
 
-    	Dr. FILL ME IN, Professor and Chair, \\
-    	Department of Systems Design Engineering, University of Waterloo \\
-    	Waterloo, Ontario, Canada \\
-    	N2L 3G1\\
-    	
-    	Dear Prof. FILL ME IN, \\
+		% TODO: CHECK ME
+		Dr. Paul Fieguth, Professor and Department Chair
+	
+		Systems Design Engineering
+	
+	    University of Waterloo
+	
+	    Waterloo, ON
+	
+	    N2L 3G1\\
+	
+		Dear Professor Fieguth,
+	\end{singlespace}
     
-        I have prepared this report, “Design of a Latex WTR Following the SYDE Guide,” as my 3B Work Report for the Engineering team at Gandalf Technologies. This report is the FIRST SECOND FINAL of three that I must submit as part of my degree requirements, and it has not received any previous academic credit. This report was entirely written by me and has not received any previous academic credit at this or any other institution.\\
+        I have prepared this report, “\reportTitle” as my 3B Work Report for the Engineering team at \company. This report is the FIRST SECOND FINAL of three that I must submit as part of my degree requirements, and it has not received any previous academic credit. This report was entirely written by me and has not received any previous academic credit at this or any other institution.\\
     	
     	FILL ME IN Write some stuff about the company briefly, name your manager, etc. \\
     	
     	The purpose of this report is to ... FILL ME IN. Write a one or two sentence, VERY BRIEF overview of the report. \\
 
-    	Sincerely,
-    
-    	\begin{figure}[!ht]
-        \includegraphics[width=0.15\textwidth]{signature}
-        \end{figure}
+
+	    \noindent
+	    Sincerely,\\
+	    \includegraphics[scale =0.2]{Signature}\\
     	
-    	Erik Derohanian \\
-    	12345678 \\
+    	\studentName \\
+    	\studentNumber \\
     	3B Systems Design Engineering
 
-	\end{spacing}
 	% new page at the end of the letter and resume indenting
 	\newpage
 	\startindent
 
 	% Abstract
+	\addcontentsline{toc}{section}{Abstract}
 	\begin{abstract}
 		This is a \LaTeX\ style that aims to match the uWaterloo SYDE style guide because doing work term report formatting makes me want to ahkerfg kasjrgu dfhgukia rgfzjkxfh aeguxdfgzxyu auisdrjgfh ifawuiegf isdurgfia uewrzcjbn zkjdfcvmba weukirydfui erjk t  zxcg awr sdfh stry sdfh yukstrh f nynyuikjef acse fcvdt ukyivegt hac erctse rgc.
 	\end{abstract}
