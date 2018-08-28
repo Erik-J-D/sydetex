@@ -1,31 +1,103 @@
-\ProvidesPackage{sydestyle}[20/12/2015 v.01 uWaterloo SYDE style guide]
+% This file is part of sydetex.
 
-% Style imports
+% sydetex is free software: you can redistribute it and/or modify
+% it under the terms of the GNU General Public License as published by
+% the Free Software Foundation, either version 3 of the License, or
+% any later version.
+
+% sydetex is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+% GNU General Public License for more details.
+
+% You should have received a copy of the GNU General Public License
+% along with sydetex.  If not, see <https://www.gnu.org/licenses/>.
+
+\ProvidesPackage{sydestyle}[28/08/2019 v.03 uWaterloo SYDE style guide]
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Style imports
 \usepackage{etoolbox}
 \usepackage{titlesec}
 \usepackage[top=1in, bottom=1in, inner=1.5in, outer=1in]{geometry}
-\usepackage[toc]{appendix}
-\usepackage{amsmath, amsfonts}
 \usepackage{setspace}
 \usepackage{url}
-\usepackage{notoccite}
-\usepackage{verbatim}
 \usepackage{caption}
+\usepackage{notoccite} % t
+
 \usepackage{tabularx}
 \usepackage{longtable}
 
-\setcounter{secnumdepth}{2}
+\usepackage{amsmath, amsfonts}
+\usepackage{graphicx}
 
-% start roman page numbers
-\setcounter{page}{1}
-\pagenumbering{roman}
+\usepackage[toc]{appendix}
+\usepackage[toc,acronym]{glossaries}
+\usepackage{biblatex}
 
-\newcommand*{\startarabicpagenumbers}{
-	\setcounter{page}{1}
-	\pagenumbering{arabic}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{verbatim}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Graphics package setup
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Bibliography and other reference sections
+\DefineBibliographyStrings{english}{
+  bibliography = {References},
+  references = {References},
 }
 
-% Set page size and margins
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Code snippet stuff
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstset{
+    frame=tb,
+    language=Python,
+    aboveskip=4mm,
+    belowskip=4mm,
+    showstringspaces=false,
+    columns=flexible,
+    basicstyle={\ttfamily},
+    numbers=left,
+    backgroundcolor=\color{backcolour}, 
+    numberstyle=\small\color{gray},
+    keywordstyle=\color{blue},
+    commentstyle=\color{dkgreen},
+    stringstyle=\color{mauve},
+    breaklines=true,
+    breakatwhitespace=true,
+    tabsize=3
+}
+\setcounter{secnumdepth}{2}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% PAGE NUMBERING
+
+% start roman page numbers
+% \setcounter{page}{1}
+\pagenumbering{roman}
+
+% \newcommand*{\startarabicpagenumbers}{
+% 	\setcounter{page}{1}
+% 	\pagenumbering{arabic}
+% }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Set page size and margins
+
 \geometry{letterpaper}
 
 % Section heading formatting
@@ -59,8 +131,8 @@
 % Make sections break page when done
 \newcommand{\sectionbreak}{\clearpage}
 
-% Title Page Stuff
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Title Page Stuff
 
 
 
@@ -129,10 +201,11 @@
 \end{titlepage}
 }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 % End Title Page Stuff
 
-% param: file name of .bib file
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% param: file name of .bib file
 \newcommand\makesydebib[1]{
 \ifx&#1& % Check if argument #1 was not set
     Please specify .bib file
@@ -145,6 +218,7 @@
 \fi
 }
 
-%add a remove dot for url links in ref 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% add a remove dot function for url links in ref 
 \newcommand\EatDot[1]{}
 \endinput
