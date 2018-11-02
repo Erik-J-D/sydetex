@@ -59,7 +59,20 @@
 \titleformat{\section}[block]
     {\vspace{-1em}\centering\sc\MakeLowercase\large}
     {\thesection}{0.5em}{\vspace{-0.8em}}
-\titleformat{\subsection}[block]
-    {\normalsize}
-    {\textit{\thesubsection}}{0.5em}\textit{}
     
+\renewcommand\thesubsection{\textit{\Alph{subsection}.}}
+\titleformat{\subsection}{}{\thesubsection}{1em}{\itshape}
+% \renewcommand{\subsection}{\Alph{\thesubsection}}
+
+% \titleformat{\subsection}[block]
+%     {\normalsize}
+%     {\textit{\Alph{\thesubsection}}}{0.5em}\textit{}
+    \usepackage{fancyhdr}
+	\pagestyle{fancy}
+  \rfoot{Team \#: Page \thepage{}}
+  \cfoot{}
+  \lfoot{SYDE 461 Project Analysis}
+  \rhead{}
+  \chead{}
+  \lhead{}
+  \renewcommand{\headrulewidth}{0pt}
